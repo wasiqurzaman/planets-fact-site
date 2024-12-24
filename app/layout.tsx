@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Antonio, League_Spartan } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const antonio = Antonio({
   subsets: ["latin"],
+  display: "swap",
+  variable: "--font-antonio",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const spartan = League_Spartan({
   subsets: ["latin"],
+  display: "swap",
+  variable: "--font-spartan",
 });
 
 export const metadata: Metadata = {
@@ -25,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${antonio.variable} ${spartan.variable} antialiased bg-stars bg-black-100 bg-cover bg-no-repeat`}
       >
         {children}
       </body>
