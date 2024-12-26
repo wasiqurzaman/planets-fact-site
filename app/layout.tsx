@@ -60,7 +60,9 @@ export default async function RootLayout({
         className={`${antonio.variable} ${spartan.variable} antialiased bg-stars bg-black-100 bg-cover bg-no-repeat`}
       >
         <Navbar data={data} />
-        <main>{children}</main>
+        <main className="tablet:border-t-2 border-t-dark-gray relative">
+          {children}
+        </main>
       </body>
     </html>
   );
