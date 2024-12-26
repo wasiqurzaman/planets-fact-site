@@ -15,12 +15,12 @@ export default function NavLinks({ planets, isOpen, setIsOpen }: Props) {
     <ul
       className={`${
         isOpen ? "flex" : "hidden"
-      } tablet:flex flex-col tablet:flex-row md:items-center tablet:gap-[33px] font-bold font-spartan text-base  tablet:text-sm uppercase tracking-[1px] py-4 px-10 `}
+      } tablet:flex flex-col tablet:flex-row self-stretch tablet:self-auto md:items-center justify-between tablet:gap-6 laptop-sm:gap-[30px] font-bold font-spartan text-base tablet:text-sm uppercase tracking-[1px]`}
     >
       {planets.map(planet => (
         <li
           key={planet.name}
-          className="hover:text-light-gray transition-color flex items-center gap-[25px] border-b-2 border-b-dark-gray py-6 tablet:border-b-0"
+          className="transition-color flex items-center gap-[25px] border-b-2 border-b-dark-gray py-6 tablet:border-b-0"
         >
           <div
             className={`w-5 h-5 rounded-full tablet:hidden`}
@@ -30,8 +30,8 @@ export default function NavLinks({ planets, isOpen, setIsOpen }: Props) {
           ></div>
           <Link
             href={`/planets/${planet.name.toLowerCase()}`}
-            className=""
             onClick={() => setIsOpen(false)}
+            className="hover:text-light-gray"
           >
             {planet.name}
           </Link>
