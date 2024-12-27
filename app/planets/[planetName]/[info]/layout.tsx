@@ -2,6 +2,16 @@ import React from "react";
 import { promises as fs } from "fs";
 import { Planet } from "@/app/layout";
 
+export async function generateStaticParams() {
+  const infos = [
+    { info: "overview" },
+    { info: "structure" },
+    { info: "geology" },
+  ];
+
+  return infos;
+}
+
 interface Props {
   children: React.ReactNode;
   params: Promise<{ planetName: string; info: string }>;
