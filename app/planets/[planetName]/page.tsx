@@ -3,7 +3,7 @@ import { promises as fs } from "fs";
 import { redirect } from "next/navigation";
 
 interface Props {
-  params: { planetName: string };
+  params: Promise<{ planetName: string }>;
 }
 
 export default async function PlanetPage({ params }: Props) {
