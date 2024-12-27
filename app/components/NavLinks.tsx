@@ -15,7 +15,7 @@ export default function NavLinks({ planets, isOpen, setIsOpen }: Props) {
     <ul
       className={`${
         isOpen ? "flex" : "hidden"
-      } tablet:flex flex-col tablet:flex-row self-stretch tablet:self-auto md:items-center justify-between tablet:gap-6 laptop-sm:gap-[30px] font-bold font-spartan text-base tablet:text-sm uppercase tracking-[1px]`}
+      } tablet:flex flex-col tablet:flex-row self-stretch tablet:self-auto md:items-center justify-between tablet:gap-6 laptop-sm:gap-[30px] font-bold font-spartan text-base tablet:text-sm uppercase tracking-[1px] absolute tablet:relative top-0 left-0  w-full tablet:w-auto px-[40px] tablet:px-0 translate-y-20 tablet:translate-y-0 bg-black-100 tablet:bg-none z-10`}
     >
       {planets.map(planet => (
         <li
