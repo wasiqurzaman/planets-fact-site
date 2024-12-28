@@ -20,7 +20,7 @@ export default function NavLinks({ planets, isOpen, setIsOpen }: Props) {
       {planets.map(planet => (
         <li
           key={planet.name}
-          className="transition-color flex items-center gap-[25px] border-b-2 border-b-dark-gray py-6 tablet:border-b-0"
+          className={`transition-color flex items-center gap-[25px] border-b-2 border-b-dark-gray py-6 tablet:border-b-0`}
         >
           <div
             className={`w-5 h-5 rounded-full tablet:hidden`}
@@ -31,7 +31,7 @@ export default function NavLinks({ planets, isOpen, setIsOpen }: Props) {
           <Link
             href={`/planets/${planet.name.toLowerCase()}`}
             onClick={() => setIsOpen(false)}
-            className="hover:text-light-gray"
+            className="text-light-gray hover:text-white transition-colors duration-300"
           >
             {planet.name}
           </Link>
