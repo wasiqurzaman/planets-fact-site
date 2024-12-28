@@ -1,7 +1,5 @@
-export default function Home() {
-  return (
-    <div>
-      <h1 className="font-antonio text-4xl">Hello Planets</h1>
-    </div>
-  );
+import { redirect } from "next/navigation";
+
+export default async function Home() {
+  redirect("/planets");
 }
