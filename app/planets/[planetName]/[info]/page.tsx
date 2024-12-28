@@ -62,21 +62,21 @@ export default async function page({ params }: Props) {
   function getPlanetSize(planet: string) {
     switch (planet) {
       case "mercury":
-        return { width: "23%", height: "auto" };
+        return { width: "25%", height: "auto" };
       case "venus":
-        return { width: "30%", height: "auto" };
+        return { width: "29%", height: "auto" };
       case "earth":
-        return { width: "30%", height: "auto" };
+        return { width: "31%", height: "auto" };
       case "mars":
-        return { width: "28%", height: "auto" };
+        return { width: "27%", height: "auto" };
       case "jupiter":
-        return { width: "60%", height: "auto" };
+        return { width: "50%", height: "auto" };
       case "saturn":
-        return { width: "65%", height: "auto" };
+        return { width: "50%", height: "auto" };
       case "uranus":
         return { width: "35%", height: "auto" };
       case "neptune":
-        return { width: "32%", height: "auto" };
+        return { width: "33%", height: "auto" };
       default:
         return { width: "50%", height: "auto" };
     }
@@ -105,12 +105,12 @@ export default async function page({ params }: Props) {
       </div>
 
       <div className="flex flex-col tablet:flex-row tablet:items-center laptop-sm:items-start laptop-sm:flex-col laptop-sm:justify-between px-8 tablet:px-0 gap-6 w-full laptop-sm:flex-1 laptop-sm:basis-[30%]">
-        <div className="flex flex-col gap-6 w-full tablet:w-1/2 laptop-sm:w-full text-center tablet:text-start">
-          <h1 className="font-antonio text-[40px] tablet:text-[48px] laptop-sm:text-[80px]">
+        <div className="flex flex-col w-full tablet:w-1/2 laptop-sm:w-full text-center tablet:text-start laptop-sm:h-[340px] lg:h-[300px] large-desktop:h-[300px]">
+          <h1 className="font-antonio text-[40px] tablet:text-[48px] laptop-sm:text-[80px] leading-[100px] mb-6">
             {planet?.name}
           </h1>
           <p className="font-spartan text-sm laptop-sm:text-base">{content}</p>
-          <div className="flex items-center gap-2 text-light-gray font-spartan self-center tablet:self-start">
+          <div className="flex items-center gap-2 text-light-gray font-spartan self-center tablet:self-start mt-6 laptop-sm:mt-auto">
             <span>Source:</span>
             <a
               href={source}
